@@ -7,7 +7,7 @@ const widgets = Array(DebugWidget);
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <Routes>
         <Route path="/" element={<Home widgets={widgets} />} />
         {widgets.map((w) => (
